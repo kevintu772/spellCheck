@@ -1,0 +1,27 @@
+0.  Pneumonoultramicroscopicsilicovolcanoconiosis is the longest word in the given dictionary,
+    It means lung disease caused by inhaling fine ash and sand dust. 
+1.  getrusage returns resource usage for the first argument and stores this into the second
+    argument which must be of type struct rusage.
+2.  Sixteen members are in struct rusage.
+3.  Calculate uses the before and after variables to find the time taken to run a function.
+4.  First, speller loads in the dictionary and opens the text file. In order to spell check 
+    the file, speller iterates through each letter in the file using fgetc(fp) where fp
+    represents the file. speller uses fgetc() to find the value of the char that the file's
+    position indicator is on. It then stores the value of fgetc() to check for its value.
+    If the value is valid (it's a letter or apotrophe) then it is saved into a temporary
+    storage array called word. If a number is found, the word is ignored and the temporary
+    storage is prepared to be overwritten.The program continues to iterate through the 
+    letters in the file untill no alphanumeric values can be found. If this is true and
+    there is information in the variable word[] then it is assumed that the word is done
+    and a "\0" is added to the end of it. The program then spell checks the word and if the
+    word was spelled wrong, the program increments misspelling and prints the misspelled 
+    word. The program then prepares word[] for overwriting so a new word can be loaded in 
+    and checked.
+5.  fscanf wouldn't allow the checking of every letter to make sure the word has only 
+    valid characters.
+6.  const char* is used to prevent any changes from happening to the word or the dictionary
+7.  I used a hash table made of linked lists. In each node of the list I put a word from the
+    dictionary
+8.  0.6 milliseconds
+9.  I removed some unescessary loops to slightly improve the speed to 0.5 milliseconds
+10. Load took the most of the run time.
